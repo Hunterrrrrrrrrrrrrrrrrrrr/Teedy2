@@ -20,7 +20,11 @@
       <groupId>com.sismics.docs</groupId>
       <artifactId>docs-core</artifactId>
     </dependency>
-    
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.7.1</version>
+    </dependency>
     <!-- Dependencies to Jersey -->
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
@@ -128,6 +132,19 @@
           </execution>
         </executions>
       </plugin>
+
+
+
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.9.1</version>
+          <configuration>
+            <outputDirectory>${project.parent.basedir}/target/site/${project.artifactId}</outputDirectory>
+          </configuration>
+        </plugin>
     </plugins>
+
   </build>
 </project>

@@ -21,6 +21,12 @@
       <artifactId>hibernate-core</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.7.1</version>
+    </dependency>
+
     <!-- Other external dependencies -->
     <dependency>
       <groupId>joda-time</groupId>
@@ -234,6 +240,25 @@
         <filtering>false</filtering>
       </resource>
     </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.9.1</version>
+        <configuration>
+          <outputDirectory>${project.parent.basedir}/target/site/${project.artifactId}</outputDirectory>
+       
+        </configuration>
+
+
+
+      </plugin>
+    </plugins>
   </build>
+
+
+
+
+
 
 </project>
