@@ -8,7 +8,7 @@ sh 'mvn clean'
 }
 stage('Compile') {
 steps {
-sh 'mvn compile'
+sh 'mvn compile -Dmaven.compiler.source=17 -Dmaven.compiler.target=17'
 }
 }
 stage('Test') {
